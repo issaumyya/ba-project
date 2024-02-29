@@ -17,7 +17,7 @@ def main():
         bedrooms_num = st.slider('Number of Bedrooms', 1, 10, 1)
     
     with col2:
-        facing_direction = st.radio('Facing Direction', ('North', 'Northwest', 'West'))
+        facing_direction = st.radio('Facing Direction', ('North', 'NorthEest', 'West'))
         travel_time_minutes = st.number_input('Travel Time (in minutes) from Marine Drive', min_value=0)
         new = st.radio('New', ('Yes', 'No'))
         bathroom = st.slider('Number of Bathrooms', 1, 5, 1)
@@ -29,12 +29,12 @@ def main():
 
     # Convert facing direction to binary
     facing_north_binary = 1 if facing_direction == 'North' else 0
-    facing_north_west_binary = 1 if facing_direction == 'Northwest' else 0
+    facing_north_eest_binary = 1 if facing_direction == 'NorthEest' else 0
     facing_west_binary = 1 if facing_direction == 'West' else 0
 
     # Calculate predicted cost
     predicted_cost = calculate_predicted_cost(carpet_sq_feet, negotiable_binary, ready_to_move_binary, bedrooms_num,
-                                              bathroom, facing_west_binary, facing_north_west_binary,
+                                              bathroom, facing_west_binary, facing_north_eest_binary,
                                               travel_time_minutes, new_binary, facing_north_binary)
 
     # Display predicted cost
