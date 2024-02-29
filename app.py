@@ -40,7 +40,7 @@ def main():
     # Display predicted cost
     st.subheader('Predicted Cost of Property:')
     st.write('₹ {:.2f}'.format(predicted_cost*predicted_cost))
-    st.divider
+    st.write("---")
     st.text("Business Analytics Project by Group 1 -- Div D")
 
 if __name__ == "__main__":
