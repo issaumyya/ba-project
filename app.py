@@ -37,3 +37,5 @@ def main():
     # Display predicted cost
     st.subheader('Predicted Cost of Property:')
     st.write(predicted_cost)
+if __name__ == "__main__":
+    main()
